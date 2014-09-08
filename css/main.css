@@ -10,34 +10,35 @@
 
 .front {
     position: absolute; 
-/*  -webkit-transition: width 2s, height 2s;	*/
+    -webkit-backface-visibility: hidden;
+    transition-duration: 2s;
     
 }
 
-.front:hover
-/*	{opacity: 0;
-
-	}
-*/
 
 .back {
 	position: relative;
-
-}
-
-.back:hover {
-	-webkit-transform: rotateY(0deg);
+	-webkit-backface-visibility: hidden;
+	transition-duration: 2s;
+	-webkit-transform: rotateY(180deg);
 	
 }
 
-.portfolio-item {
-/*		-webkit-backface-visibility: hidden;	*/
 
+.portfolio-item {
+	
 }
 
-.portfolio-item:hover {
+
+.portfolio-item:hover .front {
 	-webkit-transform: rotateY(180deg);
-	transition-duration: 2s;
+	
+}
+
+
+.portfolio-item:hover .back {
+	-webkit-transform: rotateY(0deg);
+	
 }
 
 
